@@ -1,0 +1,44 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    my_nginx.conf                                      :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: kiborroq <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/11/30 15:35:06 by kiborroq          #+#    #+#              #
+#    Updated: 2020/11/30 15:35:11 by kiborroq         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+server {
+	listen 80;
+	listen [::]:80;
+
+	server_name website;
+
+	return 301 https://$host$request_uri;
+	}
+}
+
+server {
+	listen 443 ssl;
+	listen [::]:443 ssl;
+
+	server_name website;
+
+    ssl_certificate /etc/ssl/nginx-selfsigned.crt;
+    ssl_certificate_key /etc/ssl/nginx-selfsigned.key;
+
+    root /var/www/html;
+    index index.html index.htm index.nginx-debian.html index.php;
+
+    location / {
+        autoindex on;
+        try_files $uri $uri/ =404;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+    }
+}
