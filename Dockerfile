@@ -6,7 +6,7 @@
 #    By: kiborroq <kiborroq@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/30 11:02:58 by kiborroq          #+#    #+#              #
-#    Updated: 2020/11/30 17:49:30 by kiborroq         ###   ########.fr        #
+#    Updated: 2020/12/01 15:01:28 by kiborroq         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,5 +23,7 @@ COPY ./srcs/nginx-config ./tmp/nginx-config
 COPY ./srcs/config.inc.php ./tmp/config.inc.php
 COPY ./srcs/wp-config.php ./tmp/wp-config.php
 COPY ./srcs/run_container.sh ./
+
+EXPOSE 80 443
 
 CMD bash run_container.sh

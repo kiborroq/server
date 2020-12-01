@@ -1,2 +1,2 @@
-sudo docker build -t test .
-sudo docker run -it -p 80:80 -p 443:443 test
+docker build -t test .
+docker run --rm -it -p 29200:80 -p 443:443 test
