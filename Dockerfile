@@ -50,7 +50,7 @@ RUN tar -xf latest.tar.gz -C /var/www/localhost
 RUN rm latest.tar.gz
 COPY ./srcs/wp-config.php /var/www/localhost/wordpress
 
-# Copy Necessary Scripts 
+# Copy Necessary Scripts to Container Root
 COPY ./srcs/run_container.sh ./
 COPY ./srcs/autoindex.sh ./
 RUN chmod 755 ./autoindex.sh
