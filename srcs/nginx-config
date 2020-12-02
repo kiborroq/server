@@ -26,14 +26,14 @@ server {
 	server_name localhost;
 
     ssl on;
-    ssl_certificate /etc/ssl/nginx-selfsigned.crt;
-    ssl_certificate_key /etc/ssl/nginx-selfsigned.key;
+    ssl_certificate /etc/ssl/certs/localhost.crt;
+    ssl_certificate_key /etc/ssl/private/localhost.key;
 
     root /var/www/localhost;
-    index index.php index.html index.htm;
+    index index.html index.htm index.php;
 
-    autoindex on;
     location / {
+        autoindex off;
         try_files $uri $uri/ =404;
     }
 
