@@ -10,9 +10,10 @@
 #                                                                              #
 # **************************************************************************** #
 
+# Install OS
 FROM debian:buster
 
-# install Necessary Components
+# Install Necessary Components
 RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get -y install nginx
