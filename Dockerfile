@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Dockerfile                                         :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kiborroq <kiborroq@student.42.fr>          +#+  +:+       +#+         #
+#    By: kiborroq <kiborroq@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/30 11:02:58 by kiborroq          #+#    #+#              #
-#    Updated: 2020/12/01 15:01:28 by kiborroq         ###   ########.fr        #
+#    Updated: 2020/12/04 10:02:30 by kiborroq         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
